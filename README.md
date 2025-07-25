@@ -88,3 +88,39 @@ If you are interested in running this material locally on your computer, you wil
    cd notebooks/
    jupyter lab
    ```
+
+### Developing Your Own Cookbook with the [Project Pythia JupyterHub](https://projectpythia.2i2c.cloud)
+
+*Project Pythia Cookoff 2025*
+
+**Replace https://github.com/ProjectPythia/cookbook-example with the URL of the GitHub Repo of the Cookbook you want to work with!**
+
+1. Join the [Project Pythia Cookoff 2025 Github Team](https://github.com/orgs/ProjectPythia/teams/cookoff2025). Membership in this GitHub team grants access to the Project Pythia JupyterHub
+
+1. Browse to https://projectpythia.2i2c.cloud and log in with your GitHub credentials
+
+1.  Using the 'Choose your environment and resources', select
+
+- Image: Build your own image
+- Repository: https://github.com/ProjectPythia/cookbook-example
+  
+1. Click the 'Build Image' button
+
+1. Select the machine type
+
+- Resource Allocation: 15.2 GB RAM, upto 15.6 CPUs
+
+1. Once the image has completed, click 'Start' to launch JupyterHub
+
+1. Open a Terminal within JupyterHub and clone the `https://github.com/ProjectPythia/cookbook-example` repository:
+
+   ```bash
+    git clone https://github.com/ProjectPythia/cookbook-example.git
+   ```
+
+1. Add and modify notebooks using JupyterLab
+
+1. Remember to `git add`, `git commit`, and `git push` to persist your changes back to GitHub (recommendation: `gh-scoped-creds` is a useful Python package when working with GitHub from within JupyterHub)
+
+1. When you need to modify the `environment.yml` to add additional packages, push those changes to GitHub then stop and start your JupyterHub instances (repeat the steps above) to build a new image with this updated environment.
+
